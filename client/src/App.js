@@ -30,25 +30,25 @@ function App() {
     });
   }
 
-  window.ethereum.on("accountsChanged", async () => {
-    console.log("account change detected");
-  });
-  window.ethereum.on("chainChanged", (chainId) => {
-    console.log('chain changed', chainId);
-    window.location.reload();
-  });
+  // window.ethereum.on("accountsChanged", async () => {
+  //   console.log("account change detected");
+  // });
+  // window.ethereum.on("chainChanged", (chainId) => {
+  //   console.log('chain changed', chainId);
+  //   window.location.reload();
+  // });
 
-  // // Subscribe to provider connection
-  window.ethereum.on("connect", (info) => {
-    console.log('connected to the network');
-    setLogMessage('Connected to the network');
-  });
+  // // // Subscribe to provider connection
+  // window.ethereum.on("connect", (info) => {
+  //   console.log('connected to the network');
+  //   setLogMessage('Connected to the network');
+  // });
 
-  // // Subscribe to provider disconnection
-  window.ethereum.on("disconnect", (error) => {
-    console.log(error);
-    setLogMessage('Disconnected from the network');
-  });
+  // // // Subscribe to provider disconnection
+  // window.ethereum.on("disconnect", (error) => {
+  //   console.log(error);
+  //   setLogMessage('Disconnected from the network');
+  // });
 
   useEffect(() => {
     const init = async () => {
